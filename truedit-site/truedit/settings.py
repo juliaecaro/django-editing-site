@@ -36,9 +36,9 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = os.getenv('DEBUG', False) == 'True'
 
-ALLOWED_HOSTS = ['truedits.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['truedits.onrender.com', '127.0.0.1']
 
 
 # Application definition
@@ -217,7 +217,7 @@ if 'DATABASE_URL' in os.environ:
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 # The absolute path to the directory where collectstatic will collect static files for deployment.
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # The URL to use when referring to static files (where they will be served from)
 STATIC_URL = '/static/'
