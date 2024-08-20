@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', '0v49r2v74b2jhc)11csowp#kp1v=bt
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['truedits.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -196,6 +196,8 @@ WSGIServer.handle_error = lambda *args, **kwargs: None
 SESSION_COOKIE_SECURE = True;
 
 CSRF_COOKIE_SECURE = True;
+
+CSRF_TRUSTED_ORIGINS = ['https://truedits.pythonanywhere.com']
 
 SECURE_SSL_REDIRECT = True;
 
