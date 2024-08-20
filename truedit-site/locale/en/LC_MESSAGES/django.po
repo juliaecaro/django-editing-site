@@ -1,0 +1,323 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-02 21:04-0500\n"
+"PO-Revision-Date: 2024-08-02 21:23-0500\n"
+"Last-Translator:   <randomemail@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Translated-Using: django-rosetta 0.10.0\n"
+
+# BASE_GENERIC
+#: .\media_files\templates\base_generic.html:27
+msgid "Home"
+msgstr "Home"
+
+#: .\media_files\templates\base_generic.html:28
+msgid "Terms of Service"
+msgstr "Terms of Service"
+
+#: .\media_files\templates\base_generic.html:29
+msgid "Pricing"
+msgstr "Pricing"
+
+#: .\media_files\templates\pricing.html:9
+msgid "<h1>Pricing</h1>"
+msgstr "<h1>Pricing</h1>"
+
+#: .\media_files\templates\base_generic.html:65
+msgid "Email"
+msgstr "Email"
+
+#: .\media_files\templates\base_generic.html:71
+msgid "Portfolio"
+msgstr "Portfolio"
+
+#: .\media_files\templates\base_generic.html:77
+msgid "YouTube"
+msgstr "YouTube"
+
+#: .\media_files\templates\base_generic.html:83
+msgid "Twitch"
+msgstr "Twitch"
+
+#: .\media_files\templates\base_generic.html:92
+msgid "X/Twitter"
+msgstr "X/Twitter"
+
+#: .\media_files\templates\base_generic.html:98
+msgid "Instagram"
+msgstr "Instagram"
+
+#: .\media_files\templates\base_generic.html:104
+msgid "Discord"
+msgstr "Discord"
+
+#: .\media_files\templates\base_generic.html:111
+msgid "Site coded by: Fredster"
+msgstr "Site coded by: Fredster"
+
+# INDEX
+#: .\media_files\templates\index.html:9
+msgid "Your browser does not support the video tag."
+msgstr "Your browser does not support the video tag."
+
+#: .\media_files\templates\index.html:13
+#: .\media_files\templates\pricing.html:10
+msgid ""
+"Please read the <i>entire</i> Terms of Service and pricing pages "
+"<u>before</u> contacting me.</p>"
+msgstr ""
+"Please read the <i>entire</i> Terms of Service and pricing pages "
+"<u>before</u> contacting me.</p>"
+
+#: .\media_files\templates\index.html:14
+msgid ""
+"I've been creating content from different games for over 3 years, mostly "
+"around <i>Dead By Daylight</i> and <i>League of Legends</i>. I am very "
+"passionate on what I do and have been ever since I started doing this. My "
+"editing style can be either informative or fun for the viewer depending on "
+"the commissioner's wishes. My goal as an editor is to do my best in trying "
+"to help the content creators I work for grow."
+msgstr ""
+"I've been creating content from different games for over 3 years, mostly "
+"around <i>Dead By Daylight</i> and <i>League of Legends</i>. I am very "
+"passionate on what I do and have been ever since I started doing this. My "
+"editing style can be either informative or fun for the viewer depending on "
+"the commissioner's wishes. My goal as an editor is to do my best in trying "
+"to help the content creators I work for grow."
+
+# PRICING
+
+#: .\media_files\templates\pricing.html:11
+msgid ""
+"If you want to commission an edit but you're not comfortable with the "
+"pricing for the videos or thumbnails, you are free to negotiate an amount "
+"that fits your economy. However, we must both agree on the amount before I "
+"will start work on an edit.</p>"
+msgstr ""
+"If you want to commission an edit but you're not comfortable with the "
+"pricing for the videos or thumbnails, you are free to negotiate an amount "
+"that fits your economy. However, we must both agree on the amount before I "
+"will start work on an edit.</p>"
+
+#: .\media_files\templates\pricing.html:13
+msgid "Videos"
+msgstr "Videos"
+
+#: .\media_files\templates\pricing.html:14
+msgid "Thumbnails"
+msgstr "Thumbnails"
+
+#: .\media_files\templates\pricing.html:23
+msgid "<b>Base price:</b> $6 USD per minute of the video's duration"
+msgstr "<b>Base price:</b> $6 USD per minute of the video's duration"
+
+#: .\media_files\templates\pricing.html:24
+msgid "Videos will <b>only</b> be edited clips, <i>not</i> a full vod"
+msgstr "Videos will <b>only</b> be edited clips, not a full vod"
+
+#: .\media_files\templates\pricing.html:28
+msgid "<h2>Shorts</h2>"
+msgstr "<h2>Shorts</h2>"
+
+#: .\media_files\templates\pricing.html:29
+msgid "<b>Base price:</b> $6 USD per edited clip</p>"
+msgstr "<b>Base price:</b> $6 USD per edited clip</p>"
+
+#: .\media_files\templates\pricing.html:31
+msgid "Each commission will include the following:</p>"
+msgstr "Each commission will include the following:</p>"
+
+#: .\media_files\templates\pricing.html:33
+msgid "Video montage style editing, funny moments, and highlights</li>"
+msgstr "Video montage style editing, funny moments, and highlights</li>"
+
+#: .\media_files\templates\pricing.html:34
+msgid "Effects, animations, transitions, and presets</li>"
+msgstr "Effects, animations, transitions, and presets</li>"
+
+#: .\media_files\templates\pricing.html:35
+msgid ""
+"Different effects added (such as: motion blur, different transitions, slow "
+"motion, etc.)</li>"
+msgstr ""
+"Different effects added (such as: motion blur, different transitions, slow "
+"motion, etc.)</li>"
+
+#: .\media_files\templates\pricing.html:36
+msgid "Will include memes if wanted</li>"
+msgstr "Will include memes if wanted</li>"
+
+#: .\media_files\templates\pricing.html:37
+msgid "Background music and sound effects</li>"
+msgstr "Background music and sound effects</li>"
+
+#: .\media_files\templates\pricing.html:42
+#, python-format
+msgid ""
+"Check out the %(num_videos)s videos I've made for %(num_clients)s clients so"
+" far!</p>"
+msgstr ""
+"Check out the %(num_videos)s videos I've made for %(num_clients)s clients so"
+" far!</p>"
+
+#: .\media_files\templates\pricing.html:53
+msgid "Likes"
+msgstr "Likes"
+
+#: .\media_files\templates\pricing.html:57
+msgid "Views"
+msgstr "Views"
+
+#: .\media_files\templates\pricing.html:67
+msgid "<h2>Thumbnails</h2>"
+msgstr "<h2>Thumbnails</h2>"
+
+# PRICING - THUMBNAILS
+#: .\media_files\templates\pricing.html:68
+msgid "<b>Dead by Daylight (base price):</b> $10 USD per thumbnail</p>"
+msgstr "<b>Dead by Daylight (base price):</b> $10 USD per thumbnail"
+
+#: .\media_files\templates\pricing.html:69
+msgid "<b>League of Legends (base price):</b> $5 USD per thumbnail</p>"
+msgstr "<b>League of Legends (base price):</b> $5 USD per thumbnail</p>"
+
+#: .\media_files\templates\pricing.html:70
+msgid ""
+"<b>Miscellaneous (base price):</b> $5 USD per thumbnail; if the thumbnail "
+"has multiple characters, the total amount will be $5 USD per rendered "
+"character</p>"
+msgstr ""
+"<b>Miscellaneous (base price):</b> $5 USD per thumbnail; if the thumbnail "
+"has multiple characters, the total amount will be $5 USD per rendered "
+"character</p>"
+
+#: .\media_files\templates\pricing.html:72
+#, python-format
+msgid "Check out the %(num_thumbnails)s thumbnails I've made so far!"
+msgstr "Check out the %(num_thumbnails)s thumbnails I've made so far!"
+
+#: .\media_files\templates\tos.html:7
+msgid "<h1>Terms of Service</h1>"
+msgstr "<h1>Terms of Service</h1>"
+
+#: .\media_files\templates\tos.html:8
+msgid ""
+"Please read the <i>entire</i> Terms of Service and pricing pages "
+"<u>before</u> contacting me."
+msgstr ""
+"Please read the <i>entire</i> Terms of Service and pricing pages "
+"<u>before</u> contacting me."
+
+# TERMS OF SERVICE (TOS)
+#: .\media_files\templates\tos.html:11
+msgid "All payments will be in USD in PayPal."
+msgstr "All payments will be in USD in PayPal."
+
+#: .\media_files\templates\tos.html:12
+msgid ""
+"Payments will be handled upfront, so as to prevent scams or malicious "
+"intent."
+msgstr ""
+"Payments will be handled upfront, so as to prevent scams or malicious "
+"intent."
+
+#: .\media_files\templates\tos.html:13
+#, python-format
+msgid ""
+"Payments must be handled 50%% at the start (to start on the commission) and "
+"50%% at the end (after the edit has been completed and approved)."
+msgstr ""
+"Payments must be handled 50%% at the start (to start on the commission) and "
+"50%% at the end (after the edit has been completed and approved)."
+
+#: .\media_files\templates\tos.html:14
+msgid ""
+"Once the edit is finished, further changes to the work are no longer "
+"allowed. Minor changes like text, color, or other small things are fine."
+msgstr ""
+"Once the edit is finished, further changes to the work are no longer "
+"allowed. Minor changes like text, color, or other small things are fine."
+
+#: .\media_files\templates\tos.html:15
+msgid ""
+"There will be <b>no</b> cancellations after the edit has been approved and "
+"payment has been sent."
+msgstr ""
+"There will be <b>no</b> cancellations after the edit has been approved and "
+"payment has been sent."
+
+#: .\media_files\templates\tos.html:16
+msgid ""
+"There will be <b>no refunds</b> after the payment has gone through. By "
+"paying, you are also agreeing <u>not</u> to chargeback."
+msgstr ""
+"There will be <b>no</b> refunds after the payment has gone through. By "
+"paying, you are also agreeing <u>not</u> to chargeback."
+
+#: .\media_files\templates\tos.html:17
+msgid "Any commissioner agrees to credit me when asked."
+msgstr "Any commissioner agrees to credit me when asked."
+
+#: .\media_files\templates\tos.html:20
+msgid "Other information of note:"
+msgstr "Other information of note:"
+
+#: .\media_files\templates\tos.html:22
+msgid "I have the right to decline any commission."
+msgstr "I have the right to decline any commission."
+
+#: .\media_files\templates\tos.html:23
+msgid ""
+"I retain the rights to use/submit the video for portfolio or self-"
+"promotional uses. However, you may ask me to keep the work private, and then"
+" I will keep it private."
+msgstr ""
+"I retain the rights to use/submit the video for portfolio or self-"
+"promotional uses. However, you may ask me to keep the work private, and then"
+" I will keep it private."
+
+#: .\media_files\templates\tos.html:24
+msgid ""
+"Do <b>not</b> try to rush the edit; doing so will lower the quality of the "
+"product."
+msgstr ""
+"Do <b>not</b> try to rush the edit; doing so will lower the quality of the "
+"product."
+
+#: .\media_files\templates\tos.html:26
+msgid ""
+"If you have further questions, please feel free to email me or message me in"
+" any of my socials."
+msgstr ""
+"If you have further questions, please feel free to email me or message me in"
+" any of my socials."
+
+#: .\truedit\settings.py:144
+msgid "EN"
+msgstr "EN"
+
+#: .\truedit\settings.py:145
+msgid "ES"
+msgstr "ES"
+
+# PRICING - VIDEOS
+#: .\media_files\templates\pricing.html:22
+msgid "<h2>Youtube Videos</h2>"
+msgstr "<h2>Youtube Videos</h2>"
+
+#: .\media_files\templates\pricing.html:28
+msgid "Shorts"
+msgstr "Shorts"

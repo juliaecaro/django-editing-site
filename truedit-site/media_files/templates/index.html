@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+  {% load i18n %}
+  {% load static %}
+  {% block content %}
+    <div class="sections-container">
+      <div id="home-content">
+        <video id="presentation-video" controls>
+          <source src="{{ home_video }}" type="video/mp4">
+          {% trans "Your browser does not support the video tag." %}
+        </video>
+        <h1 id="index-h1">TruEdits</h1>
+        <hr>
+        <p class="no-bottom-padding">{% trans "Please read the <i>entire</i> Terms of Service and pricing pages <u>before</u> contacting me.</p>" %}
+        <p class="no-bottom-padding">{% trans "I've been creating content from different games for over 3 years, mostly around <i>Dead By Daylight</i> and <i>League of Legends</i>. I am very passionate on what I do and have been ever since I started doing this. My editing style can be either informative or fun for the viewer depending on the commissioner's wishes. My goal as an editor is to do my best in trying to help the content creators I work for grow." %}</p>
+      </div>
+    </div>
+  {% endblock %}

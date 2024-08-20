@@ -1,0 +1,29 @@
+{% extends "base_generic.html" %}
+  {% load i18n %}
+  {% block content %}
+    <div class="sections-container">
+      <div id="tos-content">
+        <div class="page-header">
+          {% trans "<h1>Terms of Service</h1>" %}
+          <p class="no-top-padding no-bottom-padding">{% trans "Please read the <i>entire</i> Terms of Service and pricing pages <u>before</u> contacting me." %}</p>
+        </div>
+        <ol class="tos-lists">
+          <li>{% trans "All payments will be in USD in PayPal." %}</li>
+          <li>{% trans "Payments will be handled upfront, so as to prevent scams or malicious intent." %}</li>
+          <li>{% trans "Payments must be handled 50% at the start (to start on the commission) and 50% at the end (after the edit has been completed and approved)." %}</li>
+          <li>{% trans "Once the edit is finished, further changes to the work are no longer allowed. Minor changes like text, color, or other small things are fine." %}</li>
+          <li>{% trans "There will be <b>no</b> cancellations after the edit has been approved and payment has been sent." %}</li>
+          <li>{% trans "There will be <b>no refunds</b> after the payment has gone through. By paying, you are also agreeing <u>not</u> to chargeback." %}</li>
+          <li>{% trans "Any commissioner agrees to credit me when asked." %}</li>
+        </ol>
+        <hr>
+        <p class="no-bottom-padding">{% trans "Other information of note:" %}</p>
+          <ul class="tos-lists">
+            <li>{% trans "I have the right to decline any commission." %}</li>
+            <li>{% trans "I retain the rights to use/submit the video for portfolio or self-promotional uses. However, you may ask me to keep the work private, and then I will keep it private." %}</li>
+            <li>{% trans "Do <b>not</b> try to rush the edit; doing so will lower the quality of the product." %}</li>
+          </ul>
+        <p class="no-top-padding no-bottom-padding">{% trans "If you have further questions, please feel free to email me or message me in any of my socials." %}</p>
+      </div>
+    </div>
+  {% endblock %}

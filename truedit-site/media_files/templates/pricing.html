@@ -1,0 +1,82 @@
+{% extends "base_generic.html" %}
+  {% load i18n %}
+  {% load format_filters %}
+  {% load embed_video_tags %}
+  {% load static %}
+  {% block content %}
+    <div class="sections-container">
+      <div id="pricing-header">
+        {% trans "<h1>Pricing</h1>" %}
+        <p class="no-top-padding no-bottom-padding">{% trans "Please read the <i>entire</i> Terms of Service and pricing pages <u>before</u> contacting me.</p>" %}
+        <p>{% trans "If you want to commission an edit but you're not comfortable with the pricing for the videos or thumbnails, you are free to negotiate an amount that fits your economy. However, we must both agree on the amount before I will start work on an edit.</p>" %}
+        <hr>
+        <button id="video-button" type="button" onclick="videoButton()">{% trans "Videos" %}</button>
+        <button id="thumbnail-button" type="button" onclick="thumbnailButton()">{% trans "Thumbnails" %}</button>
+        <hr>
+      </div>
+      <div id="media">
+        <div id="videos">
+          <div class="media-content">
+            <!-- Your video content here -->
+            <div id="videos-text">
+              {% trans "<h2>Youtube Videos</h2>" %}
+              <p class="no-top-padding no-bottom-padding centered-text">{% trans "<b>Base price:</b> $6 USD per minute of the video's duration" %}</p>
+              <p class="centered-text">{% trans "Videos will <b>only</b> be edited clips, <i>not</i> a full vod" %}</p>
+            </div>
+            <hr>
+            <div id="shorts-text">
+              {% trans "<h2>Shorts</h2>" %}
+              <p class="no-top-padding no-bottom-padding centered-text">{% trans "<b>Base price:</b> $6 USD per edited clip</p>" %}
+
+              <p class="no-bottom-padding">{% trans "Each commission will include the following:</p>" %}
+              <ul id="shorts-list">
+                <li>{% trans "Video montage style editing, funny moments, and highlights</li>" %}
+                <li>{% trans "Effects, animations, transitions, and presets</li>" %}
+                <li>{% trans "Different effects added (such as: motion blur, different transitions, slow motion, etc.)</li>" %}
+                <li>{% trans "Will include memes if wanted</li>" %}
+                <li>{% trans "Background music and sound effects</li>" %}
+              </ul>
+            </div>
+            <hr>
+            <div class="media-text">
+              <p class="centered-text">{% blocktrans %}Check out the {{ num_videos }} videos I've made for {{ num_clients }} clients so far!</p>{% endblocktrans %}
+            </div>
+          </div>
+          <!-- Example video element -->
+        <div id="all-videos">
+          {% for video in videos %}
+          <div class="video-container">
+            {% video video.video 'tiny' %} <!-- Embed video here -->
+              <div class="video-info">
+                <div class="video-text">
+                  <span><b>{% trans "Likes" %}:</b> {{ video.likes|format_count_filter }}</span>
+                </div>
+                <div class="video-text">
+                  <span><b>{% trans "Views" %}:</b> {{ video.views|format_count_filter }}</span>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        </div>
+        <div id="thumbnails">
+          <div class="media-content">
+            <!-- Your thumbnail content here -->
+            {% trans "<h2>Thumbnails</h2>" %}
+            <p class="no-top-padding no-bottom-padding">{% trans "<b>Dead by Daylight (base price):</b> $10 USD per thumbnail</p>" %}
+            <p class="no-bottom-padding">{% trans "<b>League of Legends (base price):</b> $5 USD per thumbnail</p>" %}
+            <p>{% trans "<b>Miscellaneous (base price):</b> $5 USD per thumbnail; if the thumbnail has multiple characters, the total amount will be $5 USD per rendered character</p>" %}
+            <hr>
+            <p class="centered-text">{% blocktrans %}Check out the {{ num_thumbnails }} thumbnails I've made so far!{% endblocktrans %}</p>
+          </div>
+          <div id="all-thumbnails">
+            {% for thumbnail in thumbnails %}
+              <div class="thumbnail-container">
+                <a href="{{ thumbnail.image.url }}" class="lightbox-link" data-lightbox="thumbnail" data-title="{{ thumbnail.title }}" data-alt="{{ thumbnail.title }}"><img src="{{ thumbnail.image.url }}" alt="{{ thumbnail.title }}"></a>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

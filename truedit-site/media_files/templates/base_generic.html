@@ -1,0 +1,166 @@
+<!-- Last edited by: Fredster -->
+<!-- Last edited on: August 10, 2024 -->
+
+{% load static %}
+{% load i18n language_switcher %}
+
+<!DOCTYPE html>
+<html lang="{% get_current_language as LANGUAGE_CODE %}">
+  <head>
+    {% block title %}
+    <title>TruEdits</title>
+    {% endblock %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="{% static 'favicon/favicon.ico' %}">
+    <!-- importing custom fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,700;1,400&family=Teko:wght@300..700&display=swap" rel="stylesheet">
+    <!-- Add CSS in static file -->
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'styles/lightbox.css' %}">
+    <!-- Link to Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+    <!-- loading animation to hide the page until content is fully loaded -->
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-2 nav">
+          <div id="nav">
+            <div id="name">
+              <span>TruEdits</span>
+            </div>
+            {% block sidebar %}
+              <ul class="sidebar-nav">
+                <li>
+                  <a href="{% url 'index' %}" data-href="{% url 'index' %}"
+                    class="{% if request.resolver_match.url_name == 'index' %}active{% endif %}"
+                    {% if request.resolver_match.url_name == 'index' %}tabindex="-1" aria-disabled="true"{% endif %}>
+                    <i class="fa-solid fa-house"></i> <!-- Icon -->
+                    <span class="nav-text">{% trans "Home" %}</span> <!-- Text -->
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'tos' %}" data-href="{% url 'tos' %}"
+                    class="{% if request.resolver_match.url_name == 'tos' %}active{% endif %}"
+                    {% if request.resolver_match.url_name == 'tos' %}tabindex="-1" aria-disabled="true"{% endif %}>
+                    <i class="fa-solid fa-file-signature"></i> <!-- Icon -->
+                    <span class="nav-text">{% trans "Terms of Service" %}</span> <!-- Text -->
+                  </a>
+                </li>
+                <li>
+                  <a href="{% url 'pricing' %}" data-href="{% url 'pricing' %}"
+                  class="{% if request.resolver_match.url_name == 'pricing' %}active{% endif %}"
+                  {% if request.resolver_match.url_name == 'pricing' %}tabindex="-1" aria-disabled="true"{% endif %}>
+                  <i class="fa-solid fa-money-bill-1-wave"></i> <!-- Icon -->
+                  <span class="nav-text">{% trans "Pricing" %}</span> <!-- Text -->
+                </a>
+              </li>
+            </ul>
+            {% endblock %}
+              {% get_current_language as CURRENT_LANGUAGE %}
+              {% get_available_languages as AVAILABLE_LANGUAGES %}
+              {% get_language_info_list for AVAILABLE_LANGUAGES as languages %}
+              <div id="both-languages">
+                <ul id="languages">
+                  {% for language in languages %}
+                  <li>
+                    <a href="{% switch_language language.code %}"
+                      class="{% if language.code == CURRENT_LANGUAGE %}active{% endif %}"
+                      {% if language.code == CURRENT_LANGUAGE %}tabindex="-1" aria-disabled="true"{% endif %}>
+                      {{ language.code|upper }}
+                    </a>
+                  </li>
+                  {% if not forloop.last %}<span id="backslash"> / </span>{% endif %}
+                  {% endfor %}
+                </ul>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-10">
+          {% block content %}
+          {% endblock %}
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2 footer">
+          {% block footer %}
+          <div id="footer">
+            <span id="blank"></span>
+            <div class="tooltips">
+              <ul id="footer-list">
+                <li id="footer-link-one">
+                  <a href="mailto:truewarrior008@gmail.com" aria-label="Email TruEdits" target="_blank">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span id="social-tooltip-one" class="tooltips tooltiptext socials {% if CURRENT_LANGUAGE == 'en' %}en-style{% endif %} {% if CURRENT_LANGUAGE == 'es' %}es-style{% endif %}">{% trans "Email" %}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://ytjobs.co/talent/profile/29311" aria-label="TruEdits' portfolio" target="_blank">
+                    <i class="fa-solid fa-folder-closed"></i>
+                    <span id="social-tooltip-two" class="tooltips tooltiptext socials {% if CURRENT_LANGUAGE == 'en' %}en-style{% endif %} {% if CURRENT_LANGUAGE == 'es' %}es-style{% endif %}">{% trans "Portfolio" %}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@truewarrior08" aria-label="TruEdits' YouTube" target="_blank">
+                    <i class="fa-brands fa-youtube"></i>
+                    <span id="social-tooltip-three" class="tooltips tooltiptext socials">{% trans "YouTube" %}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.twitch.tv/truewarrior08" aria-label="TruEdits' Twitch" target="_blank">
+                    <i class="fa-brands fa-twitch"></i>
+                    <span id="social-tooltip-four" class="tooltips tooltiptext socials">{% trans "Twitch" %}</span>
+                  </a>
+                </li>
+                <!-- <li id="ellipsis-icon">
+                      <i class="fa-solid fa-ellipsis-vertical"></i>
+                    </li> -->
+                <li>
+                  <a href="https://www.x.com/TruEdits08" aria-label="TruEdits' X/Twitter" target="_blank">
+                    <i class="fa-brands fa-square-x-twitter"></i>
+                    <span id="social-tooltip-five" class="tooltips tooltiptext socials">{% trans "X/Twitter" %}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/truedits08/" aria-label="TruEdits' Instagram" target="_blank">
+                    <i class="fa-brands fa-square-instagram"></i>
+                    <span id="social-tooltip-six" class="tooltips tooltiptext socials">{% trans "Instagram" %}</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.discordapp.com/users/173659002612350986" aria-label="TruEdits' Discord profile" target="_blank">
+                    <i class="fa-brands fa-discord"></i>
+                    <span id="social-tooltip-seven" class="tooltips tooltiptext socials">{% trans "Discord" %}</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <a id="coder" href="https://www.discordapp.com/users/198665028591812609" aria-label="Site coded by: Fredster" target="_blank">
+              <i class="fa-solid fa-laptop-code"></i>
+              <span id="social-tooltip-eight" class="tooltips tooltiptext {% if CURRENT_LANGUAGE == 'en' %}en-style{% endif %} {% if CURRENT_LANGUAGE == 'es' %}es-style{% endif %}">{% trans "Site coded by: Fredster" %}</span>
+            </a>
+          </div>
+        </div>
+          {% endblock %}
+      </div>
+    </div>
+
+    <!-- javascripts -->
+    <script src="{% static 'scripts/scripts.js' %}"></script>
+    <!-- lightbox javascript -->
+    <script src="{% static 'scripts/lightbox-plus-jquery.js' %}"></script>
+    <!-- javascript for the thumbnail lightbox count numbers -->
+    <script type="text/javascript" src="{% url 'jsi18n' %}"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/7af073d22a.js" crossorigin="anonymous"></script>
+  </body>
+</html>
