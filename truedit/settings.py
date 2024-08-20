@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # DEBUG = True
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
-ALLOWED_HOSTS = ['truedits.pythonanywhere.com', '127.0.0.1']
+ALLOWED_HOSTS = ['truedits.onrender.com', '127.0.0.1']
 
 
 # Application definition
