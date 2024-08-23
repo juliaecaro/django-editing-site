@@ -38,7 +38,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY')
 # DEBUG = True
 DEBUG = os.getenv('DEBUG', False) == 'True'
 
-ALLOWED_HOSTS = ['truedits.onrender.com', '127.0.0.1']
+ALLOWED_HOSTS = ['truedits.netlify.app', '127.0.0.1']
 
 
 # Application definition
